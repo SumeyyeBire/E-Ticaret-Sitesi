@@ -27,8 +27,8 @@
   --color-text-dark: #333333; /* Koyu Metin */
   --color-text-light: #666666; /* Açık Metin */
   --color-border: #eeeeee;
-  --color-background-light: #ffffff;
-  --color-background-gray: #f7f7f7; /* Footer arka planı */
+  --color-background-footer: #e8e8e8; /* Önceki #f7f7f7'den daha belirgin */
+  --color-background-light: #ffffff; /* Ana arka plan (Slider altı) */
 }
 
 /* ==================================== */

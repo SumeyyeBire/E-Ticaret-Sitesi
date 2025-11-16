@@ -33,7 +33,6 @@ const props = defineProps<{
 }
 
 .content {
-  background-color: rgba(0, 0, 0, 0.4); /* Okunurluk için yarı şeffaf arka plan */
   padding: 20px;
   border-radius: 8px;
 }
