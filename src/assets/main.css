@@ -1,0 +1,54 @@
+/* ==================================== */
+/* 1. CSS Reset & Global Tanımlar */
+/* ==================================== */
+
+/* Tüm elementlerde kutu modelini kolaylaştırma */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Bazı pozisyonlamalar için kolaylık */
+}
+
+/* ==================================== */
+/* 2. Global CSS Değişkenleri (Renkler ve Font) */
+/* ==================================== */
+
+:root {
+  /* Font Ailesi: Sitenin okunaklı, sade fontuna benzer bir font ailesi */
+  --font-main: 'Open Sans', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Renkler */
+  --color-primary: #1a237e; /* Koyu Lacivert (Giriş Butonu, Vurgu) */
+  --color-secondary: #e3f2fd; /* Açık Mavi (Sepete Ekle Butonu) */
+  --color-success: #4caf50; /* Yeşil (Tamamla Butonu) */
+  --color-text-dark: #333333; /* Koyu Metin */
+  --color-text-light: #666666; /* Açık Metin */
+  --color-border: #eeeeee;
+  --color-background-light: #ffffff;
+  --color-background-gray: #f7f7f7; /* Footer arka planı */
+}
+
+/* ==================================== */
+/* 3. HTML Elementlerine Stil Uygulama */
+/* ==================================== */
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background-light);
+  min-height: 100vh;
+}
+
+/* Linkler ve Başlıklar için varsayılan stil */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
