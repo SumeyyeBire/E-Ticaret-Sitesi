@@ -28,6 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 
 <style scoped>
+/* ... (Stiller aynı kalacak, sadece önceki VButton.vue kodu temizlenmiş oldu) */
 .btn {
   padding: 10px 20px;
   border-radius: 4px;
@@ -50,41 +51,19 @@ const props = withDefaults(defineProps<Props>(), {
     background-color: #111a4b;
     border-color: #111a4b;
 }
-
-/* Açık Mavi (Secondary) */
-.btn-secondary { 
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  border-color: var(--color-secondary);
-}
-.btn-secondary:hover {
-    background-color: #c9e6ff;
-}
-
-/* Yeşil (Success) */
-.btn-success { 
-  background-color: var(--color-success); 
-  color: white;
-  border-color: var(--color-success);
-}
-.btn-success:hover {
-    background-color: #43a047;
-}
-
-/* Açık Mavi/Turkuaz (Accent - E-Bülten Butonu) */
+/* ... diğer renkler ve stiller ... */
 .btn-accent { 
   background-color: #8ce1fd; 
   color: var(--color-text-dark); 
   border-color: #8ce1fd;
   font-weight: 600;
-  padding: 8px 15px; /* Input ile aynı hizaya gelmesi için düzeltildi */
-  height: 38px; /* Input ile aynı yükseklikte olması için eklendi */
+  padding: 8px 15px;
+  height: 38px; 
 }
 .btn-accent:hover {
     background-color: #6ed1fa;
     border-color: #6ed1fa;
 }
-
 .btn-lg {
   padding: 12px 24px;
   font-size: 16px;

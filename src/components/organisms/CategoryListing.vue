@@ -16,24 +16,21 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps, computed } from 'vue';
 import VFilterBar from '@/components/molecules/VFilterBar.vue';
 import ProductCard from '@/components/molecules/ProductCard.vue';
+import { MOCK_PRODUCTS } from '@/data/product-data'; 
 
 const props = defineProps<{
-  categoryName: string; // Hangi kategori olduğunu gösterir
+  categoryName: string; 
 }>();
 
-// Mock Veri: Kategoriye ait örnek ürünler
-const categoryProducts = [
-    // Farklı görsellerle ProductCard molekülünü tekrar kullanıyoruz
-    { id: 201, name: 'KIRTASİYE Seti: Kalemler', price: 99.50, image: 'https://picsum.photos/id/16/300/300' },
-    { id: 202, name: 'Çiçek Desenli Spiralli Defter', price: 149.99, image: 'https://picsum.photos/id/17/300/300' },
-    { id: 203, name: 'Mini Avokado Defter', price: 79.99, image: 'https://picsum.photos/id/18/300/300' },
-    { id: 204, name: 'Büyük Boy Sırt Çantası', price: 399.00, image: 'https://picsum.photos/id/19/300/300' },
-    { id: 205, name: 'FİLİSTİN Bayraklı T-Shirt', price: 299.00, image: 'https://picsum.photos/id/20/300/300' },
-    { id: 206, name: 'Cep Seccadesi', price: 129.00, image: 'https://picsum.photos/id/21/300/300' },
-];
+// Rota slug'ına göre ürün listesini dinamik olarak filtreliyoruz
+const categoryProducts = computed(() => {
+    const slug = props.categoryName.toLowerCase();
+    // Eğer rota 'aksesuar' ise, sadece categorySlug'ı 'aksesuar' olanlar gelir.
+    return MOCK_PRODUCTS.filter(p => p.categorySlug === slug);
+});
 </script>
 
 <style scoped>

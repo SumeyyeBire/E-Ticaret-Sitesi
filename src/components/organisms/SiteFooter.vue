@@ -7,7 +7,7 @@
 
       <div class="newsletter">
         <h4>E-BÜLTEN KAYIT</h4>
-        [cite_start]<p>Kampanyalarımızdan ve yeni ürünlerimizden haberdar olmak için e-bültenimize kayıt olun[cite: 30].</p>
+        <p>Kampanyalarımızdan ve yeni ürünlerimizden haberdar olmak için e-bültenimize kayıt olun.</p>
         <div class="newsletter-form">
           <input type="email" placeholder="E-posta adresinizi giriniz..." class="input-email" />
           <VButton color="accent" size="sm" class="newsletter-btn">KAYIT OL</VButton> 
@@ -15,25 +15,23 @@
       </div>
     </div>
 
-  
-
     <div class="footer-bottom">
-            <VLogo type="text" />
-            <div class="social-icons">
-                <VNavLink to="https://facebook.com" class="social-link">[F]</VNavLink>
-                <VNavLink to="https://x.com" class="social-link">[X]</VNavLink>
-                <VNavLink to="https://instagram.com" class="social-link">[I]</VNavLink>
-            </div>
+        <VLogo type="text" />
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">&#xf09a;</a> 
+            <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">&#xf099;</a> 
+            <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">&#xf16d;</a> 
         </div>
-      </footer>
-    </template>
+    </div>
+  </footer>
+</template>
 
 <script setup lang="ts">
 import VListGroup from '@/components/molecules/VListGroup.vue';
 import VButton from '@/components/atoms/VButton.vue';
 import VLogo from '@/components/atoms/VLogo.vue';
 
-// Orijinal sitedeki link başlıklarına göre Mock Veriler [cite: 8]
+// Orijinal sitedeki link başlıklarına göre Mock Veriler
 const links1 = {
   title: 'ALIŞVERİŞ BİLGİLERİ',
   items: [
@@ -55,14 +53,13 @@ const links3 = {
   title: 'KURUMSAL',
   items: [
     { text: 'Hakkımızda', to: '/hakkimizda' },
-    { text: 'Tarihçe', to: '/tarihce' },
+    { text: 'Tarihçe', to: '/tarihçe' },
   ],
 };
 </script>
 
 <style scoped>
 .site-footer {
-  /* Global değişkeni kullanıyoruz */
   background-color: var(--color-background-footer); 
   padding: 40px 40px 20px 40px;
   border-top: 1px solid var(--color-border);
@@ -76,15 +73,15 @@ const links3 = {
   max-width: 1200px;
   margin: 0 auto 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid var(--color-border); /* Değişken kullanıldı */
+  border-bottom: 1px solid var(--color-border); 
 }
 
 /* Footer Link Grupları İçin Ek Stil */
 .group-title {
-    color: var(--color-text-dark); /* Başlıkları daha koyu yapar */
+    color: var(--color-text-dark);
 }
 .link-list a {
-    color: var(--color-text-light); /* Linkleri açık gri yapar */
+    color: var(--color-text-light); 
     padding: 2px 0;
     display: block;
     font-size: 13px;
@@ -102,19 +99,20 @@ const links3 = {
   font-size: 13px;
   color: var(--color-text-light);
   margin-bottom: 15px;
+  max-width: 250px; /* Metin taşmasını önler */
 }
 
 .newsletter-form {
-  /* Butonu input'a yapıştırmak için flex ve gap: 0 kullanıldı */
   display: flex;
   gap: 0;
+  align-items: stretch;
 }
 
 .input-email {
   flex-grow: 1;
   padding: 8px 12px;
   border: 1px solid #ccc;
-  border-right: none; /* Butona yapıştırmak için */
+  border-right: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   height: 38px;
@@ -137,8 +135,12 @@ const links3 = {
 }
 
 .social-link {
-  font-size: 18px;
-  color: var(--color-text-dark);
+    /* İkonların görünmesi için Font Awesome Brands font ailesini çağırır */
+    font-family: 'Font Awesome 5 Brands', sans-serif; 
+    font-size: 22px; 
+    color: var(--color-text-dark);
+    text-decoration: none;
+    transition: color 0.2s;
 }
 .social-link:hover {
   color: var(--color-primary);

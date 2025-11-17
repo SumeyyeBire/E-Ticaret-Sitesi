@@ -16,18 +16,13 @@
 
 <script setup lang="ts">
 import ProductCard from '@/components/molecules/ProductCard.vue';
+import { MOCK_PRODUCTS } from '@/data/product-data'; 
 
-// Mock Veri: 4 adet örnek ürün
-const featuredProducts = [
-  { id: 101, name: 'FİLİSTİN ROZET/BROŞ', price: 199.99, image: 'https://picsum.photos/id/1/300/300' }, // Ürün sayfasına benzer bir ürün [cite: 35]
-  { id: 102, name: 'Kırmızı Baskılı TİŞÖRT', price: 249.90, image: 'https://picsum.photos/id/2/300/300' },
-  { id: 103, name: 'BAMBU KAPAK 750 ML', price: 470.98, image: 'https://picsum.photos/id/3/300/300' }, // Sepetteki ürüne benzer [cite: 44]
-  { id: 104, name: 'BİR YANIM AT Hediye Seti', price: 149.99, image: 'https://picsum.photos/id/4/300/300' }, // Sepetteki ürüne benzer [cite: 45]
-];
+// Tüm ürün listesinden sadece ilk 4 ürünü gösteriyoruz
+const featuredProducts = MOCK_PRODUCTS.slice(0, 4); 
 
 const handleAddToCart = (productId: number) => {
-  console.log(`Ürün ${productId} sepete eklendi! (Pinia entegrasyonu buraya gelecek)`);
-  // İleride Pinia store entegrasyonu buraya gelecek.
+  console.log(`Ürün ${productId} sepete eklendi!`);
 };
 </script>
 
