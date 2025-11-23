@@ -17,11 +17,11 @@
 
     <div class="footer-bottom">
         <VLogo type="text" />
-        <div class="social-icons">
+        <!-- <div class="social-icons">
             <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">&#xf09a;</a> 
             <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">&#xf099;</a> 
             <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">&#xf16d;</a> 
-        </div>
+        </div> -->
     </div>
   </footer>
 </template>
@@ -29,7 +29,6 @@
 <script setup lang="ts">
 import VListGroup from '@/components/molecules/VListGroup.vue';
 import VButton from '@/components/atoms/VButton.vue';
-import VLogo from '@/components/atoms/VLogo.vue';
 
 // Orijinal sitedeki link başlıklarına göre Mock Veriler
 const links1 = {
@@ -129,13 +128,13 @@ const links3 = {
   margin: 0 auto;
 }
 
-.social-icons {
+/* .social-icons {
   display: flex;
   gap: 15px;
 }
 
 .social-link {
-    /* İkonların görünmesi için Font Awesome Brands font ailesini çağırır */
+    /* İkonların görünmesi için Font Awesome Brands font ailesini çağırır 
     font-family: 'Font Awesome 5 Brands', sans-serif; 
     font-size: 22px; 
     color: var(--color-text-dark);
@@ -144,7 +143,7 @@ const links3 = {
 }
 .social-link:hover {
   color: var(--color-primary);
-}
+}  */ 
 
 @media (max-width: 768px) {
   .footer-content {
